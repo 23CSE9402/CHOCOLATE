@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Choco World</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+
+body{
+    background:#f8ede3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.login-container{
+
+    width:400px;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0px 5px 15px rgba(0,0,0,.3);
+
+}
+
+.login-container h2{
+
+    text-align:center;
+    color:#5D4037;
+    margin-bottom:20px;
+
+}
+
+.login-container input{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+
+}
+
+.login-container button{
+
+    width:100%;
+    padding:12px;
+    background:#6D4C41;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+
+}
+
+.login-container button:hover{
+
+    background:#3E2723;
+
+}
+
+.login-container p{
+
+    text-align:center;
+    margin-top:15px;
+
+}
+
+.login-container a{
+
+    text-decoration:none;
+    color:#E65100;
+    font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h2>🍫 Login</h2>
+
+<form onsubmit="return validateLogin()">
+<input type="text" id="loginEmail" placeholder="Enter Username">
+
+<input type="password" id="loginPassword" placeholder="Enter Password">
+
+<button type="submit">Login</button>
+
+</form>
+
+<p>
+
+Don't have an account?
+
+<a href="{{ url_for('register') }}">Register</a>
+
+</p>
+
+<p>
+
+<a href="{{ url_for('home') }}">⬅ Back to Home</a>
+
+</p>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
